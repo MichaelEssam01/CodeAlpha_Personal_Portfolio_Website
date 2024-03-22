@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Michael Essam</h1>
+        </div>
+        <div id="hamburger-icon" class="hamburger-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav id="navbar" class="navbar" class="navbar hidden">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home" class="welcome-text">
+        <h3>Hello, I'm</h3>
+        <h1>Michael Essam</h1>
+        <h4>A Web Developer with 1 year of Experience.</h4>
+        <a href="./Resume/Michael_Essam_Resume.pdf" download="Michael_Essam_Resume.pdf">
+        <button class="resume-btn" onclick="downloadResume()">Get Resume</button></a>
+    </div>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="grid-container">
+          <div class="grid-item">
+                <img src="./Images/Frontend Development Image.jpg" alt="Frontend Development">
+                <h3>Frontend Development</h3>
+                <p>Web Development</p>
+          </div>
+          <div class="grid-item">
+                <img src="./Images/Backend Development Image.jpg" alt="Backend Development">
+                <h3>Backend Development</h3>
+                <p>Web Development</p>
+          </div>
+          <div class="grid-item">
+                <img src="./Images/Responsive Web Design Image.jpg" alt="Responsive Web Design">
+                <h3>Responsive Web Design</h3>
+                <p>Web Design</p>
+          </div>
+          <div class="grid-item">
+                <img src="./Images/Database Management Image.jpg" alt="Database Management">
+                <h3>Database Management</h3>
+                <p>Web Development</p>
+          </div>
+          <div class="grid-item">
+                <img src="./Images/Problem-Solving Image.jpg" alt="Problem-Solving">
+                <h3>Problem-Solving</h3>
+                <p>Problem-Solving</p>
+          </div>
+          <div class="grid-item">
+                <img src="./Images/Content Writting Image.jpg" alt="Content Writing">
+                <h3>Content Writing</h3>
+                <p>Writing</p>
+          </div>
+        </div>
+      </section>
+
+    <section id="about" class="about">
+        <div class="about-text">
+            <h2>About Me</h2>
+        <p>Information Technology student at October
+             Technological University, my passion lies
+              in programming and web development. Eager 
+              to apply my skills and stay updated with
+               industry trends, I am focused on making 
+               valuable contributions to the dynamic field of IT.</p>
+        </div>
+
+        <div class="about-image"> 
+            <img src="./Images/about-me.jpg" alt="About Image"> 
+        </div>
+        
+    </section>
+      
+      
+
+    <div class="services-container">
+        <h2>Services</h2>
+        <section id="services" class="services">
+            
+            <div class="service">
+                <div class="servies-icon">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Custom web development solutions 
+                    tailored to your business needs 
+                    using the latest technologies and 
+                    frameworks.</p>
+            </div>
+            <div class="service">
+                <div class="servies-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Web Design</h3>
+                <p>Creative and responsive web design 
+                    services focused on delivering visually 
+                    appealing and user-friendly websites.</p>
+            </div>
+            <div class="service">
+                <div class="servies-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h3>Responsive Web Design</h3>
+                <p>Designing websites that seamlessly adapt 
+                    to different devices and screen sizes, 
+                    enhancing user experience across platforms.</p>
+            </div>
+            <div class="service">
+                <div class="servies-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Database Design and Management</h3>
+                <p>Design efficient database structures, perform
+                    data modeling, and manage databases using SQL 
+                    (e.g., MySQL, PostgreSQL) or NoSQL (e.g., MongoDB, Firebase) 
+                    solutions. Ensure data integrity, security, and scalability.
+                </p>
+            </div>
+            <div class="service">
+                <div class="servies-icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <h3>Content Management Systems(CMS) Development</h3>
+                <p>Specialize in creating CMS-based websites using 
+                    platforms like WordPress, Drupal, or Joomla. Offer 
+                    customization, theme development, plugin integration, 
+                    and ongoing maintenance services for clients who prefer 
+                    CMS solutions.
+                </p>
+            </div>
+            <div class="service">
+                <div class="servies-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Web Security Services</h3>
+                <p>Offer security assessments, vulnerability testing, 
+                    and implementation of security best practices to protect 
+                    websites and applications from cyber threats. Include SSL/TLS 
+                    implementation, data encryption, secure authentication mechanisms, 
+                    and regular security audits.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    
+    <section id="contact" class="contact">
+        <div id="contact-form" class="contact-form">
+            <h2>Contact Me</h2>
+            <form onsubmit="showThankYou(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="thank-you" class="hidden">Thank you for your message!</div>
+        </div>
+        <div id="contact-info" class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:michaelessam56@gmail.com">michaelessam56@gmail.com</a></p>
+            <p>Phone: <a href="tel:+201283388144">(+20) 1283388144</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/3dut9g4aCfScHQfT/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/michael-essam-a79533197?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/MichaelEssam01" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
